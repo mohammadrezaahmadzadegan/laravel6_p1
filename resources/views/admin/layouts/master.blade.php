@@ -3,6 +3,12 @@
 
 
 <style>
+    .cursor{
+        cursor: pointer;
+    }
+    .shadow {
+        box-shadow: 0 .125rem .25rem rgba(0, 0, 0, .075) !important;
+    }
     .content {
         width: 1088px;
         height: 500px;
@@ -100,7 +106,34 @@
     }
 </style>
 <div class="content">
+    <div class="middle"><!-- start middle -->
+        <h1 class="title-box">دفترچه تلفن</h1>
+        <div class="row">
+<div class="col-6">
+    <div class="mb-4 ">
+        <a class="text-white btn btn-info" href="{{ route('products.index') }}">
+            مخاطبین
+        </a>
+        <a class="text-white btn btn-danger" href="{{ route('products.trash') }}">
+            سطل زباله
+        </a>
+        @include('admin.parts.button')
+        <a class="text-white btn btn-info" href="{{ route('products.export') }}">
+            خروجی از مخاطبین
+        </a>
+    </div>
 
+</div>
+<div class="col-6">
+@if (!empty($recovery))
+<div class="d-flex justify-content-end">
+    <a class="text-white btn btn-primary" href="{{ route('products.recovery') }}">
+        بازگردانی همه مخاطبین
+    </a>
+</div>
+@endif
+</div>
+        </div>
     @yield('content')
 
     <div class="clear"></div>

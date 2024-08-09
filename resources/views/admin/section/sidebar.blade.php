@@ -18,7 +18,7 @@
 
     <div class="menu">
         <UL id="menumain">
-            <li><a href="#">پیشخوان</a></li>
+            <li><a href="#">اسامی کاربران</a></li>
             <li class="has-sub">
                 <a href="/admin2">دوره ها
 
