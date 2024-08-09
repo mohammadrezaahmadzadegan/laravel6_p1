@@ -16,10 +16,11 @@ class ProductController extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index()
-    {
-        $products = Product::latest()->paginate(3);
-        return view('admin.listproduct', compact('products'));
-    }
+{
+    $products = Product::orderBy('id', 'desc')->paginate(3);
+
+    return view('admin.listproduct', compact('products'));
+}
 
     /**
      * Show the form for creating a new resource.
@@ -28,7 +29,7 @@ class ProductController extends Controller
      */
     public function create()
     {
-        //
+        return view('admin.createproduct');
     }
 
     /**
@@ -39,7 +40,11 @@ class ProductController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $product = new Product();
+        $product->name = $request->name;
+        $product->content = $request->content;
+        $product->save();
+        return redirect()->route('products.index')->with('success', 'با موفقیت مخاطب اضافه شد');
     }
 
     /**
@@ -165,4 +170,5 @@ class ProductController extends Controller
 
         return response($content, 200, $headers);
     }
+
 }

@@ -137,6 +137,12 @@
         بازگردانی همه مخاطبین
     </a>
 </div>
+@elseif (empty($recovery) && empty($create))
+<div class="d-flex justify-content-end">
+    <a class="text-white btn btn-primary" href="{{ route('products.create') }}">
+  افزودن مخاطب جدید
+    </a>
+</div>
 @endif
 </div>
         </div>

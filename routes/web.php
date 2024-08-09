@@ -30,3 +30,4 @@ Route::delete('/finalremoval/{product?}','ProductController@finalremoval')->name
 
 Route::get('/recovery/{product?}','ProductController@recovery')->name('products.recovery');
 Route::get('/search', 'ProductController@search')->name('products.search');
+
