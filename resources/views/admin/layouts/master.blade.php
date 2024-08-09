@@ -108,6 +108,12 @@
 <div class="content">
     <div class="middle"><!-- start middle -->
         <h1 class="title-box">دفترچه تلفن</h1>
+        <div>
+            <form class="d-flex mb-4" action="{{ route('products.search') }}" method="GET">
+                <input class="form-control" type="text" name="query" placeholder="نام یا شماره تماس را وارد کنید" required>
+                <button class="cursor mr-3 btn btn-primary rounded" type="submit">جستجو</button>
+            </form>
+        </div>
         <div class="row">
 <div class="col-6">
     <div class="mb-4 ">

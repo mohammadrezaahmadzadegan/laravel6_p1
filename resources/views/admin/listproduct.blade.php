@@ -19,7 +19,7 @@
                         </div>
                     @endif
                     <div>
-                        @php($i = 1)
+
 
 
                         @foreach ($products as $product)

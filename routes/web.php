@@ -29,3 +29,4 @@ Route::get('/export','ProductController@export')->name('products.export');
 Route::delete('/finalremoval/{product?}','ProductController@finalremoval')->name('products.finalremoval');
 
 Route::get('/recovery/{product?}','ProductController@recovery')->name('products.recovery');
+Route::get('/search', 'ProductController@search')->name('products.search');

@@ -135,6 +135,17 @@ class ProductController extends Controller
 
         return redirect()->route('products.index')->with('success', $message);
     }
+
+    public function search(Request $request)
+    {
+        $query = $request->input('query'); // دریافت ورودی جستجو
+        $contacts = Product::where('name', 'LIKE', "%{$query}%")
+            ->orWhere('content', 'LIKE', "%{$query}%")
+            ->paginate(3);
+
+        return view('admin.searchproduct', compact('contacts'));
+    }
+
     public function export()
     {
         $contacts = Product::all(); // فرض کنیم که مدل شما Contact نام دارد
