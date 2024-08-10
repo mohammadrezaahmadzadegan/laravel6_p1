@@ -19,26 +19,43 @@
         <div class="avatar">
             <img src="images/user-avatar.jpg" alt="">
         </div>
+        <ul class="navbar-nav ml-auto">
+            <!-- Authentication Links -->
+            @guest
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('login') }}">{{ __('Login') }}</a>
+                </li>
+                @if (Route::has('register'))
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route('register') }}">{{ __('Register') }}</a>
+                    </li>
+                @endif
+            @else
+                <li class="nav-item dropdown">
+                    <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
+                        {{ Auth::user()->name }} <span class="caret"></span>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{{ route('logout') }}"
+                           onclick="event.preventDefault();
+                                         document.getElementById('logout-form').submit();">
+                            {{ __('Logout') }}
+                        </a>
+
+                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                            @csrf
+                        </form>
+                    </div>
+                </li>
+            @endguest
+        </ul>
         <ul class="navProfileDropdown">
 
             <li class="head">
                 <a href="">
                     <img src="images/user-avatar.jpg" alt="">
                     <span class="labelName">نام و نام خانوادگی فرد</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="images/small-nofi.jpg"/>
-
-                    <span>تنظیمات اطلاع رسانی</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
-                    <img src="images/settings-profile.jpg"/>
-
-                    <span>تنظیمات اصلی سایت</span>
                 </a>
             </li>
             <li>

@@ -22,6 +22,7 @@ use Illuminate\Support\Facades\Route;
 // });
 
 //Route::resource('products', ProductController::class);
+Route::get('/','HomeController@index');
 Route::resource('products', 'ProductController');
 Route::get('trash',['uses'=>'ProductController@trash','as'=>'products.trash']);
 Route::get('finalDelete',['uses'=>'ProductController@finalDelete','as'=>'products.finalDelete']);
@@ -31,3 +32,7 @@ Route::delete('/finalremoval/{product?}','ProductController@finalremoval')->name
 Route::get('/recovery/{product?}','ProductController@recovery')->name('products.recovery');
 Route::get('/search', 'ProductController@search')->name('products.search');
 
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
