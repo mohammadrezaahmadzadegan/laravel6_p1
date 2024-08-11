@@ -52,7 +52,7 @@
         </ul>
         <ul class="navProfileDropdown">
 
-
+{{-- name and family --}}
             <li class="head">
                 <a href="">
                     <img src="images/user-avatar.jpg" alt="">
