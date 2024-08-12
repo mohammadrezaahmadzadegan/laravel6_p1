@@ -60,9 +60,9 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="#">
                     <img src="images/exit-profile.jpg"/>
-                    <span>خروج</span>
+                    <span >خروج</span>
                 </a>
             </li>
 
