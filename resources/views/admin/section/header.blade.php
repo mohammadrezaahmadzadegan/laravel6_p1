@@ -52,11 +52,11 @@
         </ul>
         <ul class="navProfileDropdown">
 
-{{-- and family new one for new --}}
+{{-- and family new one --}}
             <li class="head">
                 <a href="">
                     <img src="images/user-avatar.jpg" alt="">
-                    <span class="labelName">نام و نام خانوادگی فرد</span>
+                    <span class="labelName">نام  نام خانوادگی فرد</span>
                 </a>
             </li>
             <li>
