@@ -54,8 +54,8 @@
 
 {{-- and family start new again --}}
             <li class="head">
-                <a href="">
-                    <img src="images/user-avatar.jpg" alt="">
+                <a href="#">
+                    <img src="images/user-avatar.jpg" alt="image">
                     <span class="labelName">نام  نام خانوادگی فرد</span>
                 </a>
             </li>
