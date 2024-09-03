@@ -52,7 +52,7 @@
         </ul>
         <ul class="navProfileDropdown">
 
-{{-- and family start new --}}
+{{-- and family start new again --}}
             <li class="head">
                 <a href="">
                     <img src="images/user-avatar.jpg" alt="">
